@@ -1,7 +1,6 @@
 <!-- Remove from cart btn -->
 <button
   (click)="decrement.emit()"
-  color="accent"
   matTooltip="Remove {{ productName }} from cart"
   mat-icon-button
 >
@@ -14,7 +13,6 @@
   #addBtn
   (click)="increment.emit()"
   [disabled]="!!available && count >= available"
-  color="accent"
   matTooltip="Add {{ productName }} to cart"
   mat-icon-button
 >

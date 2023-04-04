@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" class="header-container">
   <a routerLink="/" matTooltip="Open main page" class="home-link">E-shop</a>
 
   <header>Test cloudfront deploy</header>
@@ -15,7 +15,7 @@
 
   <!-- Cart btn -->
   <button routerLink="cart" matTooltip="Go to cart" mat-icon-button>
-    <mat-icon [matBadge]="totalInCart$ | async" matBadgeColor="accent"
+    <mat-icon [matBadge]="totalInCart$ | async" matBadgeColor="primary"
       >shopping_cart</mat-icon
     >
   </button>
