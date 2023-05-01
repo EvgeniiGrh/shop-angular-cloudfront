@@ -18,14 +18,12 @@ export class ManageProductsService extends ApiService {
     }
 
     return this.getPreSignedUrl(file.name).pipe(
-      switchMap((url) =>
-        this.http.put(url, file, {
-          headers: {
-            // eslint-disable-next-line @typescript-eslint/naming-convention
-            'Content-Type': 'text/csv',
+      switchMap((url) => this.http.put(url, file, {
+        headers: {
+          // eslint-disable-next-line @typescript-eslint/naming-convention
+          'Content-Type': 'text/csv',
           },
-        })
-      )
+      }))
     );
   }
 
